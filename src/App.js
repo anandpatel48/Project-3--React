@@ -1,10 +1,21 @@
 import './App.css';
 import NBA from './components/NBA'
+import Main from './components/Main'
+import ReactDom from 'react-dom'
+import { BrowserRouter as Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+
+
 
 function App() {
   return (
     <div className="App">
-      <NBA />
+      <Router>
+        <Routes>
+          <Route path = "/" element = {<Main />} />
+          <Route path = "/NBA" element= {<NBA />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -3,17 +3,20 @@ import {useState, useEffect} from 'react'
 import Search from './Search'
 
 function NBA() {
+
     const month = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
     const [date, setDate] = useState(new Date())
     const [dateQuery, setDateQuery] = useState(`${date.getFullYear()}-${month[date.getMonth()]}-${date.getDate()}`)
     const [data, setData] = useState([])
     // console.log(date)
+    const KEY = process.env.NBA_KEY
 
     async function handleSubmit(e) {
         e.preventDefault()
-        let res = await fetch (`https://api.sportsdata.io/v3/nba/scores/json/GamesByDate/${dateQuery}?key=08e1666ff8dc4172868e02bb673ff311`)
-        let data = await res.json();
-        setData(data)
+        fetchData()
+        // let res = await fetch (`https://api.sportsdata.io/v3/nba/scores/json/GamesByDate/${dateQuery}?key=08e1666ff8dc4172868e02bb673ff311`)
+        // let data = await res.json();
+        // setData(data)
 
     }
     // const dateQuery = `${date.getFullYear()}-${month[date.getMonth()]}-${date.getDate()}`
@@ -22,14 +25,14 @@ function NBA() {
         setDateQuery(e.target.value)
     }
 
+    async function fetchData() {
+        let res = await fetch(`https://api.sportsdata.io/v3/nba/scores/json/GamesByDate/${dateQuery}?key=08e1666ff8dc4172868e02bb673ff311`)
+        let data = await res.json();
+        setData(data)
+    }
+
     useEffect(() => {
-      async function fetchData() {
-          let res = await fetch(`https://api.sportsdata.io/v3/nba/scores/json/GamesByDate/${dateQuery}?key=08e1666ff8dc4172868e02bb673ff311`)
-          let data = await res.json();
-          setData(data)
-      }
-      fetchData()
-      
+      fetchData()    
   },[])
 //   console.log(data)
   
@@ -43,7 +46,7 @@ const showSchedule = data.map((game, idx) => {
         )
     } else if (game.Status !== 'Canceled') {
         return (
-            <div key={idx}>
+            <div className = "gameLine" key={idx}>
                 <h1>{`${game.AwayTeam} (MoneyLine: ${game.AwayTeamMoneyLine}) @ ${game.HomeTeam} (MoneyLine: ${game.HomeTeamMoneyLine})`}</h1>
             </div>
         )
