@@ -42,3 +42,30 @@
   padding: 20px;
   margin: 10px
 }
+
+.logo {
+  height: 150px
+}
+
+.away {
+  background-color: #ff6c70;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.home {
+  background-color: #81d4fa;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.time {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px
+}
+
+.sad {
+  height: 400px
+}

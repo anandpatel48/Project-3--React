@@ -5,7 +5,10 @@ function Nav() {
         <>
         <div>
             <Link to = '/NBA'>
-                <h1>NBA Schedule</h1>
+                NBA Schedule | 
+            </Link>
+            <Link to = '/'>
+                Home
             </Link>
         </div>
         </>
