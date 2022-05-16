@@ -1,8 +1,10 @@
 import Nav from './Nav'
+import NBA from './NBA'
 
-function Main() {
+function Main(props) {
     return (
         <div className = "main">
+            
             <Nav />
             <h1>Main</h1>
             <p>This app will allow a user to see the game schedule for a certain day for the NBA.

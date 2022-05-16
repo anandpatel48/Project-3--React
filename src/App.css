@@ -69,3 +69,14 @@
 .sad {
   height: 400px
 }
+
+.nav {
+  font-size: 25px;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #81d4fa;
+}
+
+.navLogo {
+  height: 25px
+}
