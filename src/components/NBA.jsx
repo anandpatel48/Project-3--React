@@ -2,6 +2,7 @@
 import {useState, useEffect} from 'react'
 import Search from './Search'
 import Nav from './Nav'
+import {Link} from 'react-router-dom'
 
 function NBA(props) {
 
@@ -50,18 +51,33 @@ const showNBASchedule = data.map((game, idx) => {
                 <img className = "sad" src= "https://images.axios.com/nkmiWJJ8aHh_NLDsFlenGO2f2tQ=/0x0:1920x1080/1920x1080/2019/03/07/1551964823893.png" alt = "sad" />
             </div>
         )
-    } else if (game.Status !== 'Canceled') {
+    } else if (game.Status === 'Final') {
         return (
             <div className = "gameLine" key={idx}>
                 <img className='logo' src = {`../NBAlogos/${game.AwayTeam}.png`} alt = {`${game.AwayTeam} logo`}/>
-                    <h1 className='away'>{`${game.AwayTeam} (MoneyLine: ${game.AwayTeamMoneyLine})`}</h1> 
+                    <h1 className='away'>{`${game.AwayTeam} ${game.AwayTeamScore}pts (Final)`}</h1> 
+                        <h3>@</h3>
+                    <h1 className='home'>{`${game.HomeTeam} ${game.HomeTeamScore}pts (Final)`}</h1>
+                <img className='logo' src = {`../NBAlogos/${game.HomeTeam}.png`} alt = {`${game.HomeTeam} logo`}/>
+                <p className = "time">Aired at {game.DateTime.slice(-8)} (EST) on {game.Channel}</p>
+                <Link to = {`/boxscore/${game.GameID}`} id = {game.GameID}>
+                    <h5 className = "box-score">Box Score</h5>
+                </Link>
+
+            </div>
+        )
+    } else if (game.Status === 'Scheduled') {
+        return (
+            <div className = "gameLine" key = {idx}>
+                <img className='logo' src = {`../NBAlogos/${game.AwayTeam}.png`} alt = {`${game.AwayTeam} logo`}/>
+                    <h1 className='away'>{`${game.AwayTeam} (Moneyline: ${game.AwayTeamMoneyLine})`}</h1> 
                         <h3>@</h3>
                     <h1 className='home'>{`${game.HomeTeam} (MoneyLine: ${game.HomeTeamMoneyLine})`}</h1>
                 <img className='logo' src = {`../NBAlogos/${game.HomeTeam}.png`} alt = {`${game.HomeTeam} logo`}/>
                 <p className = "time">{game.DateTime.slice(-8)} on {game.Channel}</p>
             </div>
         )
-    }
+    } 
     }
 )
 
