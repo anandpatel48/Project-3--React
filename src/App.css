@@ -81,11 +81,11 @@
   height: 25px
 }
 
-.score, th, .quarters {
+table, th, .quarters, td {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
-  border: 1px solid black;
+  border: 1px solid Blue;
   font-size: 25px;
 }
 
@@ -97,7 +97,7 @@
   padding: 10px
 }
 .score-summary {
-  background-color: #ff6c70;
+  background-color: #FFCCCB;
   margin-left: 550px;
   margin-right: 550px;
   font-size: 30px;

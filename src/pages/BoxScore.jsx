@@ -31,7 +31,13 @@ const BoxScore = (props) => {
 
     return (    
     <div className = "box-score-page">
-        {game?<><Nav /> <Scoresum game={game} /> <Quarters game= {game} /> <TeamStats game = {game} /></> : <h1>Loading</h1> }
+        {game?<>
+        <Nav />
+        <Scoresum game={game} />
+        <Quarters game= {game} /> 
+        <TeamStats game= {game} />
+        </> 
+        : <h1>Loading</h1> }
 
     </div>
     )
