@@ -80,3 +80,27 @@
 .navLogo {
   height: 25px
 }
+
+.score, th, .quarters {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  font-size: 25px;
+}
+
+.quarter-section {
+  background-color: #d1e7b7;
+  margin-left: 600px;
+  margin-right: 600px;
+  font-size: 25px;
+  padding: 10px
+}
+.score-summary {
+  background-color: #ff6c70;
+  margin-left: 550px;
+  margin-right: 550px;
+  font-size: 30px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
