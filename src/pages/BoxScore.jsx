@@ -5,6 +5,7 @@ import Nav from '../components/Nav'
 import Quarters from '../components/Quarters'
 import Scoresum from "../components/Scoresum";
 import TeamStats from "../components/TeamStats";
+import Playerstats from "../components/PlayerStats";
 
 const BoxScore = (props) => {
     const params = useParams()
@@ -36,6 +37,7 @@ const BoxScore = (props) => {
         <Scoresum game={game} />
         <Quarters game= {game} /> 
         <TeamStats game= {game} />
+        <Playerstats game= {game} />
         </> 
         : <h1>Loading</h1> }
 

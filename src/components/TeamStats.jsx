@@ -1,7 +1,7 @@
 function TeamStats({game}) {
     return (
        <div className = "team-stats">
-           <h1>{game.TeamGames[0].Name} Stats</h1>
+           <h1>{game.TeamGames[0].Name} Team Stats</h1>
            <table>
                <thead>
                    <tr>
@@ -52,7 +52,7 @@ function TeamStats({game}) {
                    </tr>
                </tbody>
            </table>
-           <h1>{game.TeamGames[1].Name} Stats</h1>
+           <h1>{game.TeamGames[1].Name} Team Stats</h1>
            <table>
                <thead>
                    <tr>

@@ -2,6 +2,7 @@ function Scoresum({game}) {
     return(
     <div className = "score-summary">
     <h1>{game.Game.AwayTeam} @ {game.Game.HomeTeam}</h1>
+    <h3>{game.Game.DateTime.slice(0,10)}</h3>
     <table className = "score">
         <thead>
             <tr>
