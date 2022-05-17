@@ -4,12 +4,11 @@ import {useParams} from 'react-router'
 import Nav from '../components/Nav'
 import Quarters from '../components/Quarters'
 import Scoresum from "../components/Scoresum";
+import TeamStats from "../components/TeamStats";
 
 const BoxScore = (props) => {
     const params = useParams()
-    console.log(params)
     const id = params.id
-    console.log(id)
     const [game, setGame] = useState(null)
     // const quarters = game.Quarters
     // console.log(quarters)
@@ -26,34 +25,13 @@ const BoxScore = (props) => {
         fetchData()    
     },[])
 
-    console.log(game)
+ {game? console.log(game.TeamGames) : <h1>Loading</h1>}
 
-    // function Scoresum() {
-    //     return(
-    //     <div className = "score-summary">
-    //     <h1>{game.Game.AwayTeam} @ {game.Game.HomeTeam}</h1>
-    //     <table className = "score">
-    //         <tr>
-    //             <th>Team</th>
-    //             <th>Score</th>
-    //         </tr>
-    //         <tr>
-    //             <td>{game.Game.AwayTeam}</td>
-    //             <td>{game.Game.AwayTeamScore}</td>  
-    //         </tr>
-    //         <tr>
-    //             <td>{game.Game.HomeTeam}</td>
-    //             <td>{game.Game.HomeTeamScore}</td>  
-    //         </tr>
-    //     </table>
-    //     </div>
-    //     )
-    // }
 
 
     return (    
     <div className = "box-score-page">
-        {game?<><Nav /> <Scoresum game={game} /> <Quarters game= {game} /></> : <h1>Loading</h1> }
+        {game?<><Nav /> <Scoresum game={game} /> <Quarters game= {game} /> <TeamStats game = {game} /></> : <h1>Loading</h1> }
 
     </div>
     )
