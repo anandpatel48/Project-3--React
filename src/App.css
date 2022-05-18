@@ -139,7 +139,6 @@ td {
 .menu { grid-area: menu; }
 .main { grid-area: main; }
 .right { grid-area: right; }
-.item5 { grid-area: footer; }
 
 .grid-container {
   display: grid;
@@ -159,3 +158,4 @@ td {
   padding: 20px 0;
   font-size: 30px;
 }
+

@@ -58,7 +58,7 @@ const showMLBSchedule = data.map((game, idx) => {
 )
 
   return (
-    <div className="App">
+    <div className="app">
     <Nav />
     <Search handleSubmit = {handleSubmit} handleChange = {handleChange} dateQuery= {dateQuery}/>
       <h1>MLB Game Schedule {dateQuery}</h1>    
