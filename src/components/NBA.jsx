@@ -51,7 +51,7 @@ const showNBASchedule = data.map((game, idx) => {
                 <img className = "sad" src= "https://images.axios.com/nkmiWJJ8aHh_NLDsFlenGO2f2tQ=/0x0:1920x1080/1920x1080/2019/03/07/1551964823893.png" alt = "sad" />
             </div>
         )
-    } else if (game.Status === 'Final') {
+    } else if (game.Status === 'Final' || game.Status === 'InProgress') {
         return (
             <div className = "gameLine" key={idx}>
                 <img className='logo' src = {`../NBAlogos/${game.AwayTeam}.png`} alt = {`${game.AwayTeam} logo`}/>
@@ -82,7 +82,7 @@ const showNBASchedule = data.map((game, idx) => {
 )
 
   return (
-    <div className="App">
+    <div className="app">
     <Nav />
     <Search handleSubmit = {handleSubmit} handleChange = {handleChange} dateQuery= {dateQuery}/>
       <h1>NBA Game Schedule {dateQuery}</h1>    

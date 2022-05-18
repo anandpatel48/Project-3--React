@@ -1,7 +1,7 @@
 function Playerstats({game}) {
 
     return(
-        <div>
+        <div className = "player-stats">
         <h1>Player Stats</h1>
         <table className = 'quarters'>
             <thead>

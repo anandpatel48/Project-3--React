@@ -1,4 +1,4 @@
-.App {
+.app {
   text-align: center;
 }
 
@@ -44,21 +44,21 @@
 }
 
 .logo {
-  height: 150px
+  height: 175px
 }
 
 .away {
   background-color: #ff6c70;
   padding: 10px;
-  margin-left: auto;
-  margin-right: auto
+  margin-left: 500px;
+  margin-right: 500px
 }
 
 .home {
   background-color: #81d4fa;
   padding: 10px;
-  margin-left: auto;
-  margin-right: auto
+  margin-left: 500px;
+  margin-right: 500px
 }
 
 .time {
@@ -75,6 +75,7 @@
   color: white;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   background-color: #81d4fa;
+  text-align: center;
 }
 
 .navLogo {
@@ -103,4 +104,58 @@ table, th, .quarters, td {
   font-size: 30px;
   padding: 10px;
   margin-bottom: 20px;
+}
+
+.box-score {
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: #f2e4fd;
+  margin-left: 700px;
+  margin-right: 700px;
+}
+
+
+.player-stats, .team-stats, .score-summary, .quarter-section {
+  text-align: center;
+}
+
+td {
+  padding: 5px
+}
+
+.team-stats {
+  background-color: #FDE589;
+}
+
+.player-stats {
+  background-color: #81d4fa;
+}
+
+.box-score-page {
+  background-color: #FFCCCB;
+}
+
+.main-section { grid-area: header; }
+.menu { grid-area: menu; }
+.main { grid-area: main; }
+.right { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'menu menu menu menu menu menu'
+    'main main main main main main'
+    'right, right, right, right, right, right';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
 }
