@@ -55,9 +55,9 @@ const showNBASchedule = data.map((game, idx) => {
         return (
             <div className = "gameLine" key={idx}>
                 <img className='logo' src = {`../NBAlogos/${game.AwayTeam}.png`} alt = {`${game.AwayTeam} logo`}/>
-                    <h1 className='away'>{`${game.AwayTeam} ${game.AwayTeamScore}pts (Final)`}</h1> 
+                    <h1 className='away'>{`${game.AwayTeam} ${game.AwayTeamScore}pts (${game.Status})`}</h1> 
                         <h3>@</h3>
-                    <h1 className='home'>{`${game.HomeTeam} ${game.HomeTeamScore}pts (Final)`}</h1>
+                    <h1 className='home'>{`${game.HomeTeam} ${game.HomeTeamScore}pts (${game.Status})`}</h1>
                 <img className='logo' src = {`../NBAlogos/${game.HomeTeam}.png`} alt = {`${game.HomeTeam} logo`}/>
                 <p className = "time">Aired at {game.DateTime.slice(-8)} (EST) on {game.Channel}</p>
                 <Link to = {`/boxscore/${game.GameID}`} id = {game.GameID}>
