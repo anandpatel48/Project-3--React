@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+## Project Description.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a react app that makes use of the sportsdata.io API to display sports information. Information obtained from this API is 'scrambled' and does not have accurate statistics, but the matchups, times and teams shown are all accurate. The link to the app will take you to the home page and links can be clicked to take you to the page for the NBA schedule, and another page to see the MLB schedule. There is a search bar at the top that when changed according to the format already in the bar, lets you search for games for the MLB and NBA by date. Also, for games that have already occured or are in progress for the NBA, you can click on the 'box score' link at the bottom and it will display game information to you. 
 
-## Available Scripts
+## Deployed app link
+https://react-sports-schedule-app.herokuapp.com/
 
-In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
+## Example of data from API
+![image](https://user-images.githubusercontent.com/101526418/169387479-51650e87-306f-4806-87c3-5da17d46697e.png)
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Component heirarchy
+![image](https://user-images.githubusercontent.com/101526418/169387558-d2632593-e847-45f7-83d9-c1c19c9b61a9.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Wire Frames
+Main page with links to different leagues
+![image](https://user-images.githubusercontent.com/101526418/169387658-aed26387-2f47-4c1e-a4f6-dda64c94f344.png)
 
-## Learn More
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+League page with schedule for games
+![image](https://user-images.githubusercontent.com/101526418/169387718-45283957-0e6e-4b78-bd10-e6aa5a9cb4c9.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Code Splitting
+Box Score page
+![image](https://user-images.githubusercontent.com/101526418/169387748-b8f4fdca-e92f-45b7-b934-bafbf708b44c.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## User Stories
+As a user, I want to see the schedule of games for the given day
+As a user, I want to see the box scores of games
+As a user, I want to be able to search by date and see the games for a given date
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Planned improvements
+- getting real time actual data from the API
+- Using a table method in react to better render box score tables
+- More styling with CSS flexbox
+- Adding more user customization where users can select player names and get notified about changes in their statistics (potentially for betting purposes)
 
-### Advanced Configuration
+## Difficult Code Parts (part I plan to improve)
+<img width="658" alt="Screen Shot 2022-05-19 at 3 34 36 PM" src="https://user-images.githubusercontent.com/101526418/169388248-93eb84d0-cda9-46a4-85cb-ad3e593d063a.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
