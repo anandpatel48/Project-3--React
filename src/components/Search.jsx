@@ -1,6 +1,6 @@
 const Search = (props) => {
     return(
-       <div>
+       <div className = "search">
            <form onSubmit = {props.handleSubmit}>
                <input type = "text" onChange = {props.handleChange} value = {props.dateQuery}/>
                <button>Search</button>

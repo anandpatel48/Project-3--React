@@ -43,6 +43,14 @@
   margin: 10px
 }
 
+
+
+
+.column {
+  flex: 33.33%;
+}
+
+
 .logo {
   height: 175px
 }
@@ -76,6 +84,7 @@
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   background-color: #81d4fa;
   text-align: center;
+  padding: 15px
 }
 
 .navLogo {
@@ -159,3 +168,10 @@ td {
   font-size: 30px;
 }
 
+.search {
+  margin-top: 10px;
+}
+
+form {
+  font-size: 25px;
+}

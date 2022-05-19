@@ -72,9 +72,9 @@ const showNBASchedule = data.map((game, idx) => {
                 <img className='logo' src = {`../NBAlogos/${game.AwayTeam}.png`} alt = {`${game.AwayTeam} logo`}/>
                     <h1 className='away'>{`${game.AwayTeam} (Moneyline: ${game.AwayTeamMoneyLine})`}</h1> 
                         <h3>@</h3>
+                        <p className = "time">{game.DateTime.slice(-8)} on {game.Channel}</p>
                     <h1 className='home'>{`${game.HomeTeam} (MoneyLine: ${game.HomeTeamMoneyLine})`}</h1>
                 <img className='logo' src = {`../NBAlogos/${game.HomeTeam}.png`} alt = {`${game.HomeTeam} logo`}/>
-                <p className = "time">{game.DateTime.slice(-8)} on {game.Channel}</p>
             </div>
         )
     } 

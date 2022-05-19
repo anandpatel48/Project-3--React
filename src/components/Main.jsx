@@ -11,7 +11,7 @@ function Main(props) {
             <div className = "header">
                 <h1>App Description</h1>
                 <p>This app will allow a user to see the game schedule for a certain day for the NBA or MLB.
-                    The app will also allows the user to search for games in the NBA or MLB by a certain date.
+                    The app will also allows the user to search for games in the NBA or MLB.
                     Go to the NBA or MLB page and input a date using the same format already seen in the search box
                     and search for the game. Data is from Sportsdata.io.
                 </p>
