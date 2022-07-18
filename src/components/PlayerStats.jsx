@@ -117,7 +117,6 @@ function Playerstats({game}) {
                 ))} 
            </thead>
         </table>
-
         </div> 
         )
     }
